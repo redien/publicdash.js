@@ -22,18 +22,18 @@ publicdash.js is written using node.js-style modules.
 | :------------ | :----------: | :------------------- | :----------------- |
 | linux-gcc | [![travis-ci build status](https://travis-ci.org/redien/publicdash.js.svg?branch=master)](https://travis-ci.org/redien/publicdash.js) | x64 | 0.10, 0.11 |
 
-## Compile
-````
-grunt
-```
-
 ## Development
 [![Dependencies](https://david-dm.org/redien/publicdash.js.svg)](https://david-dm.org/redien/publicdash.js) [![devDependencies](https://david-dm.org/redien/publicdash.js/dev-status.svg)](https://david-dm.org/redien/publicdash.js#info=devDependencies)
 
 Fork the project and install dependencies:
 ```
-npm install -g mocha
+npm install -g mocha grunt-cli
 npm install
+```
+
+## Compile
+````
+grunt
 ```
 
 #### Test
