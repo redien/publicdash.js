@@ -1,0 +1,54 @@
+{
+  "name": "publicdash.js",
+  "version": "0.1.0",
+  "description": "Javascript functional utilities in the public domain",
+  "main": "publicdash.js",
+  "directories": {},
+  "devDependencies": {
+    "blanket": "1.1.6",
+    "coveralls": "2.11.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.8.0",
+    "mocha-lcov-reporter": "0.0.1",
+    "should": "5.0.1",
+    "travis-cov": "0.2.5"
+  },
+  "scripts": {
+    "test": "mocha \"**/*.unit.js\"",
+    "coverage-travis-ci": "mocha --require blanket -R travis-cov \"**/*.unit.js\"",
+    "coverage-coveralls-io": "./utility-scripts/coveralls.sh",
+    "coverage": "mocha --require blanket -R html-cov \"**/*.unit.js\" > coverage.html",
+    "unit-test": "mocha \"**/*.unit.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redien/publicdash.js"
+  },
+  "keywords": [
+    "functional",
+    "utilities",
+    "utility",
+    "map",
+    "reduce",
+    "underscore",
+    "lodash"
+  ],
+  "author": "Jesper Oskarsson <jesosk@gmail.com>",
+  "license": "Public Domain",
+  "bugs": {
+    "url": "https://github.com/redien/publicdash.js/issues"
+  },
+  "homepage": "https://github.com/redien/publicdash.js",
+  "config": {
+    "blanket": {
+      "pattern": [
+        "/source/",
+        "/units/"
+      ]
+    },
+    "travis-cov": {
+      "threshold": 90
+    }
+  },
+  "dependencies": {}
+}
