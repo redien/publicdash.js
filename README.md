@@ -16,7 +16,7 @@ _.reduce([1, 2, 3], function (result, a, index) { return result + (a * index); }
 ```
 
 #### Target platforms
-The module is written using node.js-style modules.
+publicdash.js is written using node.js-style modules.
 
 | Target Host   | Build Status | Built Configurations | Node.js Versions   |
 | :------------ | :----------: | :------------------- | :----------------- |
