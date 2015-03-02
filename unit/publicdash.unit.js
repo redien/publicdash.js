@@ -57,6 +57,31 @@ describe('_', function () {
         });
     });
     
+    describe('filter', function () {
+        it('should return [] given [] and \\item index -> true', function () {
+            _.filter([], function (item, index) {
+                return true;
+            }).should.match([]);
+        });
+        it('should return [1, 3] given [1, 2, 3] and \\item index -> index !== 1', function () {
+            _.filter([1, 2, 3], function (item, index) {
+                return index !== 1;
+            }).should.match([1, 3]);
+        });
+        it('should return {} given {} and \\item key -> true', function () {
+            var result = _.filter({}, function (item, key) {
+                return true;
+            });
+            Array.isArray(result).should.be.false;
+            result.should.match({});
+        });
+        it('should return {a: 1, c: 3} given {a: 1, b: 2, c: 3} and \\item key -> key !== "b"', function () {
+            _.filter({a: 1, b: 2, c: 3}, function (item, key) {
+                return key !== 'b';
+            }).should.match({a: 1, c: 3});
+        });
+    });
+    
     describe('snakeCase', function () {
         it('should return "" given ""', function () {
             _.snakeCase('').should.equal('');
