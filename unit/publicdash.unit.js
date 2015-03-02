@@ -116,20 +116,30 @@ describe('_', function () {
             _.isNull({}).should.be.false;
         });
     });
-    
-    describe('not', function () {
+
+    describe('negate', function () {
         it('should return true if given a falsy value', function () {
-            _.not(false).should.be.true;
-            _.not(null).should.be.true;
-            _.not(undefined).should.be.true;
-            _.not(0).should.be.true;
-            _.not(NaN).should.be.true;
+            _.negate(false).should.be.true;
+            _.negate(null).should.be.true;
+            _.negate(undefined).should.be.true;
+            _.negate(0).should.be.true;
+            _.negate(NaN).should.be.true;
         });
         it('should return false if given a truthy value', function () {
-            _.not(true).should.be.false;
-            _.not(1).should.be.false;
-            _.not([]).should.be.false;
-            _.not({}).should.be.false;
+            _.negate(true).should.be.false;
+            _.negate(1).should.be.false;
+            _.negate([]).should.be.false;
+            _.negate({}).should.be.false;
+        });
+    });
+    
+    describe('compose', function () {
+        it('should return a function equal to a(b(x)) given a(x) and b(y)', function () {
+            var a = function (x) { return x * 3; };
+            var b = function (x) { return x + 2; };
+            
+            _.compose(a, b)(5).should.equal(21);
+            _.compose(a, b)(3).should.equal(15);
         });
     });
 });
