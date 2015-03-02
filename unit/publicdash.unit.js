@@ -103,4 +103,33 @@ describe('_', function () {
             _.snakeCase('SnakeCase').should.equal('snake_case');
         });
     });
+    
+    describe('isNull', function () {
+        it('should return true if given null', function () {
+            _.isNull(null).should.be.true;
+        });
+
+        it('should return false if given any other value', function () {
+            _.isNull(undefined).should.be.false;
+            _.isNull(0).should.be.false;
+            _.isNull([]).should.be.false;
+            _.isNull({}).should.be.false;
+        });
+    });
+    
+    describe('not', function () {
+        it('should return true if given a falsy value', function () {
+            _.not(false).should.be.true;
+            _.not(null).should.be.true;
+            _.not(undefined).should.be.true;
+            _.not(0).should.be.true;
+            _.not(NaN).should.be.true;
+        });
+        it('should return false if given a truthy value', function () {
+            _.not(true).should.be.false;
+            _.not(1).should.be.false;
+            _.not([]).should.be.false;
+            _.not({}).should.be.false;
+        });
+    });
 });
