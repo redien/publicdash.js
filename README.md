@@ -2,7 +2,7 @@
 ![version](http://img.shields.io/badge/version-0.1.0-blue.svg) [![Public Domain](http://img.shields.io/badge/public%20domain%3F-yes-blue.svg)](http://creativecommons.org/publicdomain/zero/1.0/) [![SemVer](http://img.shields.io/badge/SemVer-2.0.0-blue.svg)](http://semver.org/spec/v2.0.0.html) ![development stage](http://img.shields.io/badge/development%20stage-alpha-orange.svg)
 
 publicdash.js is a functional utility library similar to lodash and underscore.js in the public domain.
-Licensing is pretty much the only reason for creating this library.
+Creating a library in the public domain is pretty much the only reason for this library to exist.
 
 ## Use
 ```
